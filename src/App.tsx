@@ -106,13 +106,13 @@ function App() {
       try {
         const client = new BrowserOAuthClient({
           clientMetadata: {
-            "client_id": "https://ba12105e67c3.ngrok-free.app/client-metadata.json",
+            "client_id": "https://orangesky.pages.dev/client-metadata.json",
             "client_name": "Orangesky",
-            "client_uri": "https://ba12105e67c3.ngrok-free.app",
-            "logo_uri": "https://ba12105e67c3.ngrok-free.app/logo.png",
-            "tos_uri": "https://ba12105e67c3.ngrok-free.app/tos",
-            "policy_uri": "https://ba12105e67c3.ngrok-free.app/policy",
-            "redirect_uris": ["https://ba12105e67c3.ngrok-free.app/callback"],
+            "client_uri": "https://orangesky.pages.dev",
+            "logo_uri": "https://orangesky.pages.dev/logo.png",
+            "tos_uri": "https://orangesky.pages.dev/tos",
+            "policy_uri": "https://orangesky.pages.dev/policy",
+            "redirect_uris": ["https://orangesky.pages.dev/callback"],
             "scope": "atproto transition:generic",
             "grant_types": ["authorization_code", "refresh_token"],
             "response_types": ["code"],
