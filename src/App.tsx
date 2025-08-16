@@ -34,10 +34,10 @@ async function subscribeBlockList(agent: any, listAtUri: string) {
 }
 
 async function addMutedWords(agent: any) {
-  const list: string[] = ["섹블","섹트","자위","딸감","NSFW","リフレ","メンズエ","ソープ","どえむ","S男","M男","ドM","ドS","ご主人様","肉便器","オフパコ","調教","破滅願望","능욕","羞恥","뒷계","裏垢","보추","오토코노코","여장","cd","야방","도태남","성향계","도미넌트","서브미스","조교플레이","노예플레이","가축","핀섭","핀돔","FD","페티쉬","출장","시디","부커","부커만남","왁싱","ntr","부부만남","펨돔","성향자","쉬멜","관클","건오","야단라","야단텔","댈구","그리드홈","가슴","정액","신음","초대남","초대녀","네토","네토만남","비떱","BBW","상납","뚱녀","몸평","일탈","지인능욕","지인박제","지인상납","지인얼싸","근친","박제","지인ㅈ올","ㅈ올","얼싸","걸레","사정관리","변녀","암캐","조련","남존여비","박제","협박플","좆집","온플","야노","암퇘지","수치플","광대플","디그레이디","마조","유부녀","게단라","게단텔","영교","영딸","오프","초대","대물","갱뱅","커플만남","커닐","커닐드","커닐링","스왑","스와핑","섹파","FWB","오르가즘","바텀","탑","게이","고딩게이","중딩게이","초딩게이","대전게이","부산게이","파이즈리","슬레이브","스팽","빈유","창녀","입싸","보평","꼬평","맘눌뎀","변남","영섹","폰섹","풋잡","발정","신상상납","게이노예","경기게이","대전게이","부산게이","서울게이","청주게이","멜돔","멜섭","11게이","10게이","09게이","08게이","슬림돔","슬림게이","뚱게이","통게이","뚱통게이","뚱통섭","온플섭","오프섭","naughty","nudes","boobs","게친소","뜨밤","관전남","관전녀","걸레보지","부커모임","개보지","난교","질싸","질내사정","쓰리썸","게이알바"]
+  const list: string[] = ["hairyass", "realnsfw", "transporn", "tgirlporn", "cumdump", "slut", "섹블","섹트","자위","딸감","NSFW","リフレ","メンズエ","ソープ","どえむ","S男","M男","ドM","ドS","ご主人様","肉便器","オフパコ","調教","破滅願望","능욕","羞恥","뒷계","裏垢","보추","오토코노코","여장","cd","야방","도태남","성향계","도미넌트","서브미스","조교플레",이"노예플레",이"가축","핀섭","핀돔","FD","페티쉬","출장","시디","부커","부커만남","왁싱","ntr","부부만남","펨돔","성향자","쉬멜","관클","건오","야단라","야단텔","댈구","그리드홈","가슴","정액","신음","초대남","초대녀","네토","네토만남","비떱","BBW","상납","뚱녀","몸평","일탈","지인능욕","지인박제","지인상납","지인얼싸","근친","박제","지인ㅈ올","ㅈ올","얼싸","걸레","사정관리","변녀","암캐","조련","남존여비","박제","협박플","좆집","온플","야노","암퇘지","수치플","광대플","디그레이디","마조","유부녀","게단라","게단텔","영교","영딸","오프","초대","대물","갱뱅","커플만남","커닐","커닐드","커닐링","스왑","스와핑","섹파","FWB","오르가즘","바텀","탑","게이","고딩게이","중딩게이","초딩게이","대전게이","부산게이","파이즈리","슬레이브","스팽","빈유","창녀","입싸","보평","꼬평","맘눌뎀","변남","영섹","폰섹","풋잡","발정","신상상납","게이노예","경기게이","대전게이","부산게이","서울게이","청주게이","멜돔","멜섭","11게이","10게이","09게이","08게이","슬림돔","슬림게이","뚱게이","통게이","뚱통게이","뚱통섭","온플섭","오프섭","naughty","nudes","boobs","게친소","뜨밤","관전남","관전녀","걸레보지","부커모임","개보지","난교","질싸","질내사정","쓰리썸","게이알바", "야상극", "ㄷㄸ", "ㅍㄹ", "ㄱㄷ", "미자", "사라하우스", "펩섭", "디그", "오팬무", "커플토이", "발기강도", "성인용품", "핑거바이브", "섹스토이", "바니룸", "전주바니룸", "레즈플", "ㅈㄱㅁㄴ", "조건만남", "조건", "당일만남", "당일조건", "서울조건", "강남조건"]
   const words = list.map(v => ({
     value: v,
-    targets: ['both'], // 'both' 대신 content+tag
+    targets: ['both'],
     actorTarget: 'all'
   }))
 
@@ -82,7 +82,6 @@ function App() {
   const [current, setCurrent] = useState(0)
   const [count, setCount] = useState(0)
   const [muteStatus, setMuteStatus] = useState<"idle" | "loading" | "done">("idle")
-  const [blockAdult1Status, setBlockAdult1Status] = useState<"idle" | "loading" | "done">("idle")
   const [blockAdult2Status, setBlockAdult2Status] = useState<"idle" | "loading" | "done">("idle")
   const [blockAdult3Status, setBlockAdult3Status] = useState<"idle" | "loading" | "done">("idle")
   const [blockAdult4Status, setBlockAdult4Status] = useState<"idle" | "loading" | "done">("idle")
@@ -181,18 +180,6 @@ function App() {
     } catch (e) {
       console.error(e)
       setMuteStatus("idle") // 실패 시 다시 초기 상태
-    }
-  }
-
-  // Mutelist 구독 버튼
-  const subBlocklist1 = async () => {
-    try {
-      setBlockAdult1Status("loading")
-      await subscribeBlockList(agentRef.current, "at://did:plc:acfdzk5s5siwp3zvwgrwosw3/app.bsky.graph.list/3lqykacry672s")
-      setBlockAdult1Status("done")
-    } catch (e) {
-      console.error(e)
-      setBlockAdult1Status("idle") // 실패 시 다시 초기 상태
     }
   }
 
@@ -297,28 +284,6 @@ function App() {
                     </Button>
                   </CardContent>
                 </CardHeader>
-              </Card>
-              <Card className="w-full max-w-sm mx-auto mb-4 ">
-                <CardHeader>
-                  <CardTitle>성인물 계정 및 팔로워 검토 리스트</CardTitle>
-                  <CardDescription>
-                    이 리스트의 구독은 알고리즘의 분리 목적으로 만들어진 것으로, 성인물 제작자와 그 팔로워들을 모두 차단합니다.<br/>
-                    @yoonseul.bsky.social 님의 검토 리스트
-                  </CardDescription>
-                  <CardAction>
-                    <Button variant="link" asChild>
-                      <a href="https://bsky.app/profile/did:plc:acfdzk5s5siwp3zvwgrwosw3/lists/3lqykacry672s" target="_blank">목록</a>
-                    </Button>
-                  </CardAction>
-                </CardHeader>
-                <CardContent>
-                  <Button variant="outline" className="w-full font-semibold" onClick={subBlocklist1} disabled={blockAdult1Status === "loading" || blockAdult1Status === "done"}>
-                    {blockAdult1Status === "loading" && <Loader2Icon className="animate-spin mr-2" />}
-                    {blockAdult1Status === "idle" && "차단"}
-                    {blockAdult1Status === "loading" && "처리 중..."}
-                    {blockAdult1Status === "done" && "차단 완료"}
-                  </Button>
-                </CardContent>
               </Card>
               <Card className="w-full max-w-sm mx-auto mb-4 ">
                 <CardHeader>
